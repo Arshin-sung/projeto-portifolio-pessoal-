@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu POrtfólio Pessoal/title>
+        <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#Main">Ir para o conteudo</a>
+    <header class="site header">
+        <div class="container header inner">
+            <h1 class="site titulo">Artur </h1>
+                <nav class="site nav" aria-label="Menu Principal">
+                    <ul>
+                        <li><a href="#Inicio">Inicio</a></li>
+                        <li><a href="#Sobre">Sobre</a></li>
+                        <li><a href="Habilidades">Habilidades</a></li>
+                        <li><a href="#Contato">Contato</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+    <!-- Seção do inicio -->
+    <main id="main">
+        <section id="Inicio" class="autor container">
+            <img class="foto de perfil" src="" alt="">
+            <div class="texto do autor">
+                <h2>Oi, Meu nome é Artur</h2>
+                <p class="lead">Eu sou um desenvolvedor iniciante e estou aprendendo front-end</p>
+            </div>
+        </section>
+        <!-- Sobre Mim -->
+         <section id="sobre" class="sobre container">
+            <h3>Sobre Mim</h3>
+            <p>Escrever aqui</p>
+         </section>
+         <!-- Habilidades -->
+          <section id="habilidades" class=" habilidades container">
+            <h3>Habilidades</h3>
+            <ul class="lista de habilidades">
+                <li class="item de habilidade">HTML &amp; CSS</li>
+                <li class="item de habilidade">Java Script</li>
+                <li class="item de habilidade">Algoritimos</li>
+                <li class="item de habilidade">ui/ux</li>
+            </ul>
+          </section>
+
+          <!-- contato -->
+           <section id="contato" class="contato container">
+            <h3>contato</h3>
+            <p>redes sociais</p>
+            <ul class="lista de redes">
+                <li><a href="#github" aria-label="github">github</a></li>
+                <li><a href="#linkedin" aria-label="linkedin">linkedin</a></li>
+                <li><a href="#whatsapp" aria-label="whatsapp">whatsapp</a></li>
+            </ul>
+           </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p> <span id="year"></span> Artur - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        // define ano no rodapé automaticamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
