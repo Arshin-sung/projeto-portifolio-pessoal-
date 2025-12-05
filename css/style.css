@@ -84,6 +84,31 @@ main section img{
     display: flex;
     align-items: center;
 }
+/* botão e contador */
+.btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(90deg, var(--bg), var(--muted));
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 56, 168, 0.12);
+    transition: background-color 150ms ease; 
+    transform: 120ms ease;
+    box-shadow: 120ms ease;
+    }
+    .btn:hover,
+    .btn:focus {
+        background: linear-gradient(90deg, var(--muted), var(--bg));
+        transform: translateY(-2px);
+        outline: none;
+    }
+    .hint {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 8px;
+    }
 /* lista de habilidade estilizada */
 
 ul{

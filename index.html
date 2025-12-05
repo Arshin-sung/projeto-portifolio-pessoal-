@@ -27,6 +27,16 @@
             <p>Estou Iniciando minha jornada no mundo da tecnologia</p>
         </section>
 
+        <!-- contador e botão -->
+         <section id="contador" class="card">
+            <h3>contador de cliques</h3>
+            <p>cliques: <span id="count">0</span></p>
+            <!-- botão -->
+             <button id="clickBtn" class="btn" type="button">Clique em mim</button>
+             <!-- clique duplo reset -->
+              <p class="hint">dica: clique duas vezes para resetar o contador.</p>
+         </section>
+
         <!-- Sobre Mim -->
          <section id="sobre">
             <h3>Sobre Mim</h3>
@@ -56,4 +66,35 @@
         <p>Todos os direitos reservados.</p>
     </footer>
 </body>
+<script>
+     window.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('clickBtn');
+      const countEL = document.getElementById('count');
+      let count = 0;
+      let clickTimer = null;
+      const CLICK_DELAY = 250;
+
+      function updateUI(){
+        countEL.textContent = count;
+      }
+
+      btn.addEventListener('click', () => {
+        if (clickTimer) return;
+        clickTimer = setTimeout(() => {
+          count += 1;
+          updateUI();
+          clickTimer = null;
+        }, CLICK_DELAY);
+      });
+
+      btn.addEventListener('dblclick', () => {
+        if (clickTimer){
+          clearTimeout(clickTimer);
+          clickTimer = null;
+        }
+        count = 0;
+        updateUI();
+      });
+    });
+</script>
 </html>
